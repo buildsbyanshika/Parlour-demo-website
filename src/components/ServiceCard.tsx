@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Service } from "@/data/services";
 import { useState } from "react";
+import Image from "next/image";
 
 interface Props {
   service: Service;
@@ -19,7 +20,7 @@ export default function ServiceCard({ service }: Props) {
     >
       <div className="relative w-full h-50 rounded-xl overflow-hidden shadow-lg border border-gray-200">
         <Link href={`/service/${service.slug}`}>
-          <img
+          <Image
             src={service.icon}
             alt={service.title}
             className={`w-full h-full object-cover transition duration-300 ${

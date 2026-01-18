@@ -2,6 +2,7 @@
 
 import React from "react";
 import { BlogItem } from "@/data/blogdetail";
+import Image from "next/image";
 
 interface BlogDetailProps {
   blog: BlogItem;
@@ -18,7 +19,7 @@ export default function BlogDetail({ blog, onSetBreadcrumb }: BlogDetailProps) {
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-8 py-10">
       <div className="w-full aspect-[16/9] mb-8 rounded-3xl overflow-hidden bg-gray-100">
-        <img
+        <Image
           src={blog.image}
           alt={blog.title}
           className="object-cover w-full h-full"

@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import { testimonials } from "@/data/testimonials";
 import Link from 'next/link';
+import Image from "next/image";
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -79,7 +80,7 @@ export default function Testimonials() {
                 <div className="flex items-center gap-4">
                   {t.avatar && (
                     <div className="w-11 h-11 rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src={t.avatar}
                         alt={t.name}
                         className="w-full h-full object-cover"

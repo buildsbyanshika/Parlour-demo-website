@@ -30,11 +30,11 @@ body {
   overflow-x: hidden;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .scroll-container::-webkit-scrollbar {
   display: none;

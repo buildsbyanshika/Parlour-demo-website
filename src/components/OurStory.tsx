@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 
 export default function OurStory() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
       <div className="md:w-1/2 flex justify-center">
-        <img
+        <Image
           src="/images/ourstory.webp"
           alt="Our Story"
           className="rounded-3xl object-cover w-full max-w-md h-auto md:h-[400px]"

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import { galleryImages, GalleryImage } from "@/data/gallery";
+import Image from "next/image";
 
 export default function Gallery() {
   const [lightboxImage, setLightboxImage] = useState<GalleryImage | null>(null);
@@ -19,7 +20,7 @@ export default function Gallery() {
             className="relative mb-4 break-inside-avoid hover:opacity-40 transition-opacity duration-300 cursor-pointer"
             onClick={() => setLightboxImage(img)}
           >
-            <img
+            <Image
               src={img.src}
               alt={img.name}
               className="w-full rounded-xl object-cover"
@@ -44,7 +45,7 @@ export default function Gallery() {
               ✕
             </button>
 
-            <img
+            <Image
               src={lightboxImage.src}
               alt={lightboxImage.name}
               className="w-full h-auto object-contain bg-black"

@@ -1,4 +1,5 @@
 import { Service } from "@/data/services";
+import Image from "next/image";
 
 export default function ServiceDetail({ service }: { service: Service }) {
   if (!service.sections) {
@@ -29,7 +30,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
             }
             `}
           >
-            <img
+            <Image
               src={section.image}
               alt={section.title}
               className="w-full h-100 rounded-xl object-contain"

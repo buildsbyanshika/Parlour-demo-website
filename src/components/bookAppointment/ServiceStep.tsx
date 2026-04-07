@@ -9,9 +9,9 @@ interface SelectedServices {
 interface ServiceStepProps {
   formData: {
     service: ServiceSimplified[] | [];
-    [key: string]: any;
+    [key: string]: FormData;
   };
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   gotoNext: () => void;
 }
 

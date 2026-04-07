@@ -83,6 +83,8 @@ export default function Testimonials() {
                       <Image
                         src={t.avatar}
                         alt={t.name}
+                        width={100}
+            height={100}
                         className="w-full h-full object-cover"
                       />
                     </div>

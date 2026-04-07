@@ -33,6 +33,8 @@ export default function ServiceDetail({ service }: { service: Service }) {
             <Image
               src={section.image}
               alt={section.title}
+              width={100}
+            height={100}
               className="w-full h-100 rounded-xl object-contain"
             />
           </div>

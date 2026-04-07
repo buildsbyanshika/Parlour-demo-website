@@ -1,10 +1,11 @@
+import { FormData } from './BookStep';
 import React, { useState } from "react";
 import NextButton from "./NextButton";
 import BackButton from "./BackButton";
 
 interface ClientInfoStepProps {
-  formData: any;
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   gotoBack: () => void;
   gotoNext: () => void;
 }

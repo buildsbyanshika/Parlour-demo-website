@@ -8,6 +8,8 @@ export default function OurStory() {
         <Image
           src="/images/ourstory.webp"
           alt="Our Story"
+          width={100}
+            height={100}
           className="rounded-3xl object-cover w-full max-w-md h-auto md:h-[400px]"
         />
       </div>
@@ -28,7 +30,7 @@ export default function OurStory() {
         </p>
         <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
           Join us on this beautiful journey to wellness and elegance. LadiesParlour is not just a salon;
-          it's your partner in beauty, confidence, and self-love.
+          it&apos;s your partner in beauty, confidence, and self-love.
         </p>
       </div>
     </section>

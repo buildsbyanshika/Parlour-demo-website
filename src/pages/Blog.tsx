@@ -25,9 +25,11 @@ export default function Blog() {
               <Image
                 src={blog.image}
                 alt={blog.title}
-                fill
-                className="object-cover"
-                priority
+                width={500}
+              height={500}
+                // fill
+                // className="object-cover"
+                // priority
               />
             </div>
 

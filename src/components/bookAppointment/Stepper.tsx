@@ -5,8 +5,7 @@ import ServiceStep from "./ServiceStep";
 import DateTimeStep from "./DateTimeStep";
 import ClientInfoStep from "./ClientInfoStep";
 import SummaryStep from "./SummaryStep";
-// import PaymentStep from "./PaymentStep";
-import BookStep from "./BookStep";
+import { FormData } from './BookStep';  // Add this import
 
 const steps = [
   "Select Service",
@@ -17,22 +16,6 @@ const steps = [
   "Book",
 ];
 
-interface ServiceSimplified {
-  id: number;
-  heading: string;
-  subservices: { name: string; price: string }[];
-}
-
-interface FormData {
-  service: ServiceSimplified[];
-  date: string;
-  time: string;
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  // payment?: string;
-}
 
 export default function Stepper() {
   const [activeStep, setActiveStep] = useState(0);
@@ -63,13 +46,39 @@ export default function Stepper() {
   };
 
   const stepComponents = [
-    <ServiceStep formData={formData} setFormData={setFormData} gotoNext={gotoNext} />,
-    <DateTimeStep formData={formData} setFormData={setFormData} gotoBack={gotoBack} gotoNext={gotoNext} />,
-    <ClientInfoStep formData={formData} setFormData={setFormData} gotoBack={gotoBack} gotoNext={gotoNext} />,
-    <SummaryStep formData={formData} gotoBack={gotoBack} gotoNext={gotoNext} />,
-    // <PaymentStep formData={formData} setFormData={setFormData} gotoBack={gotoBack} gotoNext={gotoNext} />,
-    <BookStep formData={formData} gotoBack={gotoBack} />,
-  ];
+  <ServiceStep 
+    key="service-step"
+    formData={formData} 
+    setFormData={setFormData} 
+    gotoNext={gotoNext} 
+  />,
+  <DateTimeStep 
+    key="datetime-step"
+    formData={formData} 
+    setFormData={setFormData} 
+    gotoBack={gotoBack} 
+    gotoNext={gotoNext} 
+  />,
+  <ClientInfoStep 
+    key="clientinfo-step"
+    formData={formData} 
+    setFormData={setFormData} 
+    gotoBack={gotoBack} 
+    gotoNext={gotoNext} 
+  />,
+  <SummaryStep 
+    key="summary-step"
+    formData={formData} 
+    gotoBack={gotoBack} 
+    gotoNext={gotoNext} 
+  />,
+  <BookStep 
+    key="book-step"
+    formData={formData} 
+    gotoBack={gotoBack} 
+  />,
+];
+
 
   return (
     <div className="flex flex-col md:flex-row w-full min-h-screen">

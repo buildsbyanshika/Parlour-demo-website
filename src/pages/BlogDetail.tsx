@@ -22,6 +22,8 @@ export default function BlogDetail({ blog, onSetBreadcrumb }: BlogDetailProps) {
         <Image
           src={blog.image}
           alt={blog.title}
+          width={100}
+            height={100}
           className="object-cover w-full h-full"
         />
       </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Service } from "@/data/services";
 import { useState } from "react";
 import Image from "next/image";
+import { Fullscreen } from "lucide-react";
 
 interface Props {
   service: Service;
@@ -23,6 +24,8 @@ export default function ServiceCard({ service }: Props) {
           <Image
             src={service.icon}
             alt={service.title}
+            width={100}
+            height={100}
             className={`w-full h-full object-cover transition duration-300 ${
               isHovered ? "grayscale" : ""
             }`}

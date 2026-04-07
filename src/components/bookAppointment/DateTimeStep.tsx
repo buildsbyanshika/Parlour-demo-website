@@ -3,8 +3,8 @@ import NextButton from "./NextButton";
 import BackButton from "./BackButton";
 
 interface DateTimeStepProps {
-  formData: { date: string; time: string; [key: string]: any };
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
+  formData: { date: string; time: string; [key: string]: unknown };
+  setFormData: React.Dispatch<React.SetStateAction<unknown>>;
   gotoBack: () => void;
   gotoNext: () => void;
 }

@@ -23,6 +23,8 @@ export default function Gallery() {
             <Image
               src={img.src}
               alt={img.name}
+              width={100}
+            height={100}
               className="w-full rounded-xl object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -48,6 +50,8 @@ export default function Gallery() {
             <Image
               src={lightboxImage.src}
               alt={lightboxImage.name}
+              width={100}
+            height={100}
               className="w-full h-auto object-contain bg-black"
             />
           </div>

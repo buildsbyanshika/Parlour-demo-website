@@ -6,15 +6,24 @@ import BackButton from "./BackButton";
 import Notification from "@/components/Notificaton";
 import {TERMS_AND_CONDITIONS_DATA} from "@/data/bookAppointmentData";
 
-interface FormData {
-  service: any;
+// types.ts
+export interface ServiceSimplified {
+  id: number;
+  heading: string;
+  subservices: { name: string; price: string }[];
+}
+
+export interface FormData {
+  service: ServiceSimplified[];
   date: string;
   time: string;
   name: string;
   email: string;
   phone: string;
   message: string;
+  [key: string]: unknown;  // ← ADD THIS LINE
 }
+
 
 interface BookStepProps {
   formData: FormData;

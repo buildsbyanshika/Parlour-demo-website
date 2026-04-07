@@ -27,9 +27,7 @@ export default function Blog() {
                 alt={blog.title}
                 width={500}
               height={500}
-                // fill
-                // className="object-cover"
-                // priority
+                className="object-cover w-full h-full"
               />
             </div>
 

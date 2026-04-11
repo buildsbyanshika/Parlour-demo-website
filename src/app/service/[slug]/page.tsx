@@ -1,6 +1,6 @@
 import React from "react";
 import { services } from "@/data/services";
-import ServiceDetail from "@/pages/ServiceDetail";
+import ServiceDetail from "../../../components/pages/ServiceDetail";
 import Breadcrumb from "../../../global/Breadcrumb";
 import BackButton from "@/components/BackButton";
 

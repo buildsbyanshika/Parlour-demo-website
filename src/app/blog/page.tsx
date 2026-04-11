@@ -1,4 +1,4 @@
-import Blog from "@/pages/Blog";
+import Blog from "../../components/pages/Blog";
 import Breadcrumb from "@/global/Breadcrumb";
 
 export default function BlogPage() {

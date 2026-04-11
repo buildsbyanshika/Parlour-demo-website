@@ -1,6 +1,6 @@
 import React from "react";
 import Breadcrumb from "@/global/Breadcrumb";
-import ServicesList from "@/pages/ServiceList";
+import ServicesList from "@/components/pages/ServiceList";
 
 export default function ServicesPage() {
   return (

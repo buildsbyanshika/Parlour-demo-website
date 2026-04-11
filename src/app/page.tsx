@@ -1,8 +1,8 @@
 import Slider from "@/components/Slider";
-import Services from "@/pages/ServiceList";
+import Services from "../components/pages/ServiceList";
 import ChooseUs from "@/components/ChooseUs";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/pages/Contact";
+import Contact from "../components/pages/Contact";
 
 export default function Home() {
   return (

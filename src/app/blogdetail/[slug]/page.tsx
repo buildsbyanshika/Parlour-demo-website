@@ -1,5 +1,5 @@
 import { blogData } from "@/data/blogdetail";
-import BlogDetail from "@/pages/BlogDetail";
+import BlogDetail from "../../../components/pages/BlogDetail";
 import Breadcrumb from "../../../global/Breadcrumb";
 import { notFound } from "next/navigation";
 import React from "react";

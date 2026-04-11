@@ -1,4 +1,4 @@
-import { Service } from "@/data/services";
+import { Service } from "../../data/services";
 import Image from "next/image";
 
 export default function ServiceDetail({ service }: { service: Service }) {

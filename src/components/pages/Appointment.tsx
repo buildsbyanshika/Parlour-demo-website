@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import Stepper from "@/components/bookAppointment/Stepper";
-import BackButton from "@/components/BackButton";
+import Stepper from "../bookAppointment/Stepper";
+import BackButton from "../BackButton";
 
 export default function AppointmentPage() {
   return (

@@ -18,13 +18,12 @@ export default function BlogDetail({ blog, onSetBreadcrumb }: BlogDetailProps) {
 
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-8 py-10">
-      <div className="w-full aspect-[16/9] mb-8 rounded-3xl overflow-hidden bg-gray-100">
+      <div className="relative w-full aspect-[16/9] mb-8 rounded-3xl overflow-hidden bg-gray-100">
         <Image
           src={blog.image}
           alt={blog.title}
-          width={100}
-            height={100}
-          className="object-cover w-full h-full"
+          fill
+          className="object-cover"
         />
       </div>
       <h1 className="text-3xl sm:text-4xl font-bold text-pink-600 mb-6">

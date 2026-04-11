@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true, // ✅ DO NOT block build on ESLint
   },
   images: {
-    domains: ["localhost"],
+    // domains: ["localhost"], // Not needed for local images
   },
 };
 

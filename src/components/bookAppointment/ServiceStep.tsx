@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { serviceDataSimplified, ServiceSimplified } from "@/data/servicesDataForStep";
 import NextButton from "./NextButton";
+import { FormData } from './types';
 
 interface SelectedServices {
-  [serviceId: number]: string[]; 
+  [serviceId: number]: string[];
 }
 
 interface ServiceStepProps {
-  formData: {
-    service: ServiceSimplified[] | [];
-    [key: string]: FormData;
-  };
+  formData: FormData;
   setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   gotoNext: () => void;
 }

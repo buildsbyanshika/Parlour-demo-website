@@ -79,13 +79,13 @@ export default function Testimonials() {
                 </p>
                 <div className="flex items-center gap-4">
                   {t.avatar && (
-                    <div className="w-11 h-11 rounded-full overflow-hidden">
+                    <div className="relative w-11 h-11 rounded-full overflow-hidden">
                       <Image
                         src={t.avatar}
                         alt={t.name}
-                        width={100}
-            height={100}
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="44px"
+                        className="object-cover"
                       />
                     </div>
                   )}

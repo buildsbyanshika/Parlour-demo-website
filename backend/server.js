@@ -1,3 +1,6 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -7,7 +10,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.Mongodb_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoUri = process.env.Mongodb_URL;
+if (!mongoUri) {
+  console.error('Missing MongoDB connection string. Please add Mongodb_URL to backend/.env or frontend/.env');
+  process.exit(1);
+}
+
+mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('connected', () => {
   console.log('MongoDB connected successfully');
 });
@@ -17,9 +26,9 @@ mongoose.connection.on('error', (err) => {
 
 
 app.post('/api/appointments', async (req, res) => {
-  const { service, date, time, name, email, phone, message  } = req.body;
+  const { service, date,time, name, email, phone, message  } = req.body;
 
-  const requiredFields = [ 'service', 'date', 'time', 'name', 'email', 'phone' ,'message'];
+  const requiredFields = [ 'service', 'date', 'name', 'email', 'phone' ,'message'];
   const missingFields = requiredFields.filter(field => !req.body[field]);
 
   if (missingFields.length > 0) {
@@ -35,7 +44,7 @@ app.post('/api/appointments', async (req, res) => {
     const appointment = new Appointment({
       service,
       date,
-      time,
+      time: time || "",
       name,
       email,
       phone,

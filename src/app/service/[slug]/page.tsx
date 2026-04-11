@@ -8,8 +8,9 @@ interface Params {
   slug: string;
 }
 
-export default function ServicePage({ params }: { params: Params }) {
-  const service = services.find((s) => s.slug === params.slug);
+export default async function ServicePage({ params }: { params: Params | Promise<Params> }) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) return <div className="p-8">Service not found.</div>;
 
   return (

@@ -6,24 +6,7 @@ import BackButton from "./BackButton";
 import Notification from "@/components/Notificaton";
 import {TERMS_AND_CONDITIONS_DATA} from "@/data/bookAppointmentData";
 
-// types.ts
-export interface ServiceSimplified {
-  id: number;
-  heading: string;
-  subservices: { name: string; price: string }[];
-}
-
-export interface FormData {
-  service: ServiceSimplified[];
-  date: string;
-  time: string;
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  [key: string]: unknown;  // ← ADD THIS LINE
-}
-
+import { FormData } from './types';
 
 interface BookStepProps {
   formData: FormData;
@@ -64,8 +47,8 @@ export default function BookStep({ formData, gotoBack }: BookStepProps) {
         termsAccepted,
       };
 
-      console.log("Sending body:", body);
-      console.log("JSON to be sent:", JSON.stringify(body, null, 2));
+      // console.log("Sending body:", body);
+      // console.log("JSON to be sent:", JSON.stringify(body, null, 2));
 
       const res = await fetch("http://localhost:5000/api/appointments", {
         method: "POST",
@@ -87,6 +70,7 @@ export default function BookStep({ formData, gotoBack }: BookStepProps) {
         });
       }
     } catch (err) {
+      console.error(err);
       setNotification({
         message: "An error occurred. Please try again later.",
         type: "error",

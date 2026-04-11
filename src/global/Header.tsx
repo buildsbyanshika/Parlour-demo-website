@@ -13,19 +13,19 @@ export default function Header() {
 
   return (
     <>
-      <header className="absolute top-0 left-0 w-full z-20 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative">
+      <header className="fixed top-0 left-0 w-full z-20 text-white">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex bg-tranparent-300 justify-between items-center h-16 relative">
           <h1 className="font-bold text-lg font-serif ">LadiesParlour</h1>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-6 font-serif text-gray-100 items-center relative">
-            <Link href="/" className="hover:text-gray-200 hover:bg-pink-600 hover:p-2 hover:rounded-lg font-bold transition">
+          <nav className="hidden md:flex space-x-1 font-serif text-gray-50 items-center relative">
+            <Link href="/" className="px-2 py-1 rounded-lg font-bold transition-colors duration-200 hover:text-gray-200 hover:bg-pink-600 block">
               Home
             </Link>
             <div className="relative group">
               <Link
                 href="#"
-                className="hover:text-gray-200 hover:bg-pink-600 hover:p-2 hover:rounded-lg font-bold transition block"
+                className="px-2 py-1 rounded-lg font-bold transition-colors duration-200 group-hover:text-gray-200 group-hover:bg-pink-600 block"
               >
                 About
               </Link>
@@ -67,14 +67,14 @@ export default function Header() {
 
             <Link
               href="/services"
-              className="hover:text-gray-200 hover:bg-pink-600 hover:p-2 hover:rounded-lg font-bold transition"
+              className="px-2 py-1 rounded-lg font-bold transition-colors duration-200 hover:text-gray-200 hover:bg-pink-600"
             >
               Services
             </Link>
-            <Link href="/contact" className="hover:text-gray-200 hover:bg-pink-600 hover:p-2 hover:rounded-lg font-bold transition">
+            <Link href="/contact" className="px-2 py-1 rounded-lg font-bold transition-colors duration-200 hover:text-gray-200 hover:bg-pink-600">
               Contact
             </Link>
-            <Link href="/gallery" className="hover:text-gray-200 hover:bg-pink-600 hover:p-2 hover:rounded-lg font-bold transition">
+            <Link href="/gallery" className="px-2 py-1 rounded-lg font-bold transition-colors duration-200 hover:text-gray-200 hover:bg-pink-600">
               Gallery
             </Link>
           </nav>
@@ -105,7 +105,7 @@ export default function Header() {
 
               <button
                 onClick={() => setAboutOpen(!aboutOpen)}
-                className="w-full flex font-bold justify-between items-center pt-2 hover:text-gray-200 border-b border-pink-300 pb-2 px-4"
+                className={`w-full flex font-bold justify-between items-center pt-2 border-b border-pink-300 pb-2 px-4 transition-colors duration-200 ${aboutOpen ? "bg-pink-600 text-white" : "hover:text-gray-200"}`}
                 aria-expanded={aboutOpen}
                 aria-controls="mobile-about-menu"
               >

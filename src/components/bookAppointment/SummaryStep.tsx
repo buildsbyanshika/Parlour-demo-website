@@ -9,7 +9,7 @@ interface SummaryStepProps {
       subservices: { name: string; price: string }[];
     }[];
     date: string;
-    time: string;
+    time?: string;
     name: string;
     email: string;
     phone: string;

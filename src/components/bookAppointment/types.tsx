@@ -8,10 +8,10 @@ export interface ServiceSimplified {
 export interface FormData {
   service: ServiceSimplified[];
   date: string;
-  time: string;
+  time?: string;
   name: string;
   email: string;
   phone: string;
   message: string;
-  [key: string]: unknown;  // ← ADD THIS LINE
+  [key: string]: unknown;
 }

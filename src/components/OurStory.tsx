@@ -5,13 +5,14 @@ export default function OurStory() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-12 sm:py-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
       <div className="md:w-1/2 flex justify-center">
-        <Image
-          src="/images/ourstory.webp"
-          alt="Our Story"
-          width={100}
-            height={100}
-          className="rounded-3xl object-cover w-full max-w-md h-auto md:h-[400px]"
-        />
+        <div className="relative w-full max-w-md h-[400px] rounded-3xl overflow-hidden">
+          <Image
+            src="/images/ourstory.webp"
+            alt="Our Story"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       <div className="md:w-1/2 flex flex-col justify-center">

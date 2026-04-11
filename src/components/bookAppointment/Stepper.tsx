@@ -5,7 +5,8 @@ import ServiceStep from "./ServiceStep";
 import DateTimeStep from "./DateTimeStep";
 import ClientInfoStep from "./ClientInfoStep";
 import SummaryStep from "./SummaryStep";
-import { FormData } from './BookStep';  // Add this import
+import BookStep from "./BookStep";
+import { FormData } from './types';
 
 const steps = [
   "Select Service",

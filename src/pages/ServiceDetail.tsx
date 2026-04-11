@@ -30,13 +30,15 @@ export default function ServiceDetail({ service }: { service: Service }) {
             }
             `}
           >
-            <Image
-              src={section.image}
-              alt={section.title}
-              width={100}
-            height={100}
-              className="w-full h-100 rounded-xl object-contain"
-            />
+            <div className="relative w-full h-96 rounded-xl overflow-hidden">
+              <Image
+                src={section.image}
+                alt={section.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain"
+              />
+            </div>
           </div>
 
           <div

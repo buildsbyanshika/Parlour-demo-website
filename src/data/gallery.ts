@@ -26,7 +26,7 @@ export const galleryImages: GalleryImage[] = [
   { id: 19, src: "/images/nailart_bg.jpg", name: "Nail Art Background" },
   { id: 20, src: "/images/other_1.jpeg", name: "Other Service 1" },
   { id: 21, src: "/images/other_2.jpg", name: "Other Service 2" },
-  { id: 22, src: "/images/other_bg.webp", name: "Other Service Background" },
+  { id: 22, src: "/images/other_bg.jpeg", name: "Other Service Background" },
   { id: 24, src: "/images/services_bredcrumb.jpg", name: "Services Breadcrumb" },
   { id: 25, src: "/images/skincare_bg.webp", name: "Skincare Background" },
   { id: 26, src: "/images/slider_1_makeup.jpg", name: "Slider Makeup" },

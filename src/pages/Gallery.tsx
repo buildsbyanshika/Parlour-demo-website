@@ -41,7 +41,7 @@ export default function Gallery() {
           <div className="relative bg-white rounded-2xl overflow-hidden max-w-3xl w-full mx-4">
             <button
               onClick={() => setLightboxImage(null)}
-              className="absolute top-4 right-4 text-black font-bold hover:text-black"
+              className="absolute top-4 right-4 text-black font-semibold hover:bg-white hover:scale-110 hover:px-2 hover:rounded-lg bg-white px-2 rounded-lg hover:font-bold hover:text-shadow-lg transition-all duration-300  hover:text-red-900 transition"
               aria-label="Close"
             >
               ✕

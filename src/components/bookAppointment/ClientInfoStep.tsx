@@ -1,4 +1,4 @@
-import { FormData } from './BookStep';
+import { FormData } from './types';
 import React, { useState } from "react";
 import NextButton from "./NextButton";
 import BackButton from "./BackButton";

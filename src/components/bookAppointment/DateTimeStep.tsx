@@ -1,10 +1,11 @@
 import React from "react";
 import NextButton from "./NextButton";
 import BackButton from "./BackButton";
+import { FormData } from './types';
 
 interface DateTimeStepProps {
-  formData: { date: string; time: string; [key: string]: unknown };
-  setFormData: React.Dispatch<React.SetStateAction<unknown>>;
+  formData: FormData;
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>;
   gotoBack: () => void;
   gotoNext: () => void;
 }
@@ -35,7 +36,7 @@ export default function DateTimeStep({ formData, setFormData, gotoBack, gotoNext
         <BackButton onClick={gotoBack} />
         <NextButton
           onClick={gotoNext}
-          disabled={!formData.date || !formData.time}
+          disabled={!formData.date}
         />
       </div>
     </form>

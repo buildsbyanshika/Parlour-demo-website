@@ -5,12 +5,13 @@ import { notFound } from "next/navigation";
 import React from "react";
 import BackButton from "@/components/BackButton";
 
-export default function BlogDetailPage({
+export default async function BlogDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const blog = blogData.find((b) => b.slug === params.slug);
+  const { slug } = await params;
+  const blog = blogData.find((b) => b.slug === slug);
   if (!blog) {
     return notFound();
   }

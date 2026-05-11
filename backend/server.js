@@ -28,7 +28,7 @@ mongoose.connection.on('error', (err) => {
 app.post('/api/appointments', async (req, res) => {
   const { service, date,time, name, email, phone, message  } = req.body;
 
-  const requiredFields = [ 'service', 'date', 'name', 'email', 'phone' ,'message'];
+  const requiredFields = [ 'service', 'date', 'name', 'email', 'phone' ];
   const missingFields = requiredFields.filter(field => !req.body[field]);
 
   if (missingFields.length > 0) {

@@ -47,10 +47,7 @@ export default function BookStep({ formData, gotoBack }: BookStepProps) {
         termsAccepted,
       };
 
-      // console.log("Sending body:", body);
-      // console.log("JSON to be sent:", JSON.stringify(body, null, 2));
-
-      const res = await fetch("http://localhost:5000/api/appointments", {
+      const res = await fetch("/api/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

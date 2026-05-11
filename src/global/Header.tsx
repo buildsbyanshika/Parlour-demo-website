@@ -15,7 +15,9 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 w-full z-20 text-white">
         <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex bg-tranparent-300 justify-between items-center h-16 relative">
-          <h1 className="font-bold text-lg font-serif ">LadiesParlour</h1>
+          <Link href="/">
+            <h1 className="font-bold text-lg font-serif ">LadiesParlour</h1>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-1 font-serif text-gray-50 items-center relative">

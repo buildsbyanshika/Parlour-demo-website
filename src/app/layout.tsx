@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import Header from "../global/Header";
 import Footer from "../global/Footer";
-import BookAppointmentButton from "@/components/BookAppointmentButton ";
+import BookAppointmentButton from "@/components/BookAppointmentButton";
 import Preloader from "@/components/Preloader";
 import useLoadingTracker from "@/components/LoadingTracker";
 

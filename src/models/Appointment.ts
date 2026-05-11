@@ -3,16 +3,16 @@ import mongoose, { Document, Schema } from 'mongoose';
 export interface IAppointment extends Document {
   service: object[]; // Assuming array of objects
   date: string;
-  time: string;
+  time?: string;
   name: string;
   email: string;
   phone: string;
-  message: string;
+  message?: string;
 }
 
 const AppointmentSchema: Schema = new Schema({
   service: {
-    type: [Object],
+    type: [Schema.Types.Mixed],
     required: true,
   },
   date: {
@@ -21,7 +21,8 @@ const AppointmentSchema: Schema = new Schema({
   },
   time: {
     type: String,
-    required: true,
+    required: false,
+    default: "",
   },
   name: {
     type: String,
@@ -37,7 +38,8 @@ const AppointmentSchema: Schema = new Schema({
   },
   message: {
     type: String,
-    required: true,
+    required: false,
+    default: "",
   },
 });
 

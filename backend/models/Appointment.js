@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const AppointmentSchema = new mongoose.Schema({
   service: {
-  type: [Object],
+  type: [mongoose.Schema.Types.Mixed],
   required: true,
 },
   date:
@@ -27,7 +27,8 @@ const AppointmentSchema = new mongoose.Schema({
   },
   message: 
   {type: String,
-     required: true,
+     required: false,
+     default: "",
   },
 //   payment: String,
 
